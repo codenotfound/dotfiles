@@ -10,6 +10,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'takac/vim-hardtime'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -133,3 +134,13 @@ set expandtab
 
 " Conveniently handle backups
 set backupdir=~/.vim-tmp,~/tmp,/var/tmp,$HOME/Local\ Settings/Temp
+
+" Hardtime settings. True hardcore.
+let g:hardtime_default_on = 1
+let g:hardtime_allow_different_key = 1
+
+" Key remaps
+:imap jk <Esc>
+
+" Sensible defaults
+set relativenumber
