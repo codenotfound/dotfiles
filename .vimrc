@@ -11,6 +11,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'takac/vim-hardtime'
+Plugin 'thanthese/Tortoise-Typing'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -27,7 +28,8 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 syntax enable
-set background=dark
+set background=light
+set t_Co=16
 colorscheme solarized
 " An example for a vimrc file.
 "
@@ -127,20 +129,29 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 " Indentation
-set smartindent
+"set smartindent "seems deprecated
 set tabstop=4
 set shiftwidth=4
 set expandtab
 
 " Conveniently handle backups
 set backupdir=~/.vim-tmp,~/tmp,/var/tmp,$HOME/Local\ Settings/Temp
+set directory=~/.vim-tmp,~/tmp,/var/tmp,$HOME/Local\ Settings/Temp
 
 " Hardtime settings. True hardcore.
 let g:hardtime_default_on = 1
 let g:hardtime_allow_different_key = 1
 
 " Key remaps
-:imap jk <Esc>
+:imap jj <Esc>
+map ; :
+noremap ;; ;
 
+" Russian keyboard
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+highlight lCursor guifg=NONE guibg=Cyan
+"setlocal spell spelllang=ru_yo,en_us " 'yo' letter
 " Sensible defaults
 set relativenumber
