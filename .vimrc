@@ -12,6 +12,10 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'takac/vim-hardtime'
 Plugin 'thanthese/Tortoise-Typing'
+"Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'tpope/vim-fugitive'
+"Plugin 'vimoutliner/vimoutliner'
+Plugin 'vim-scripts/Vim-R-plugin'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -155,3 +159,26 @@ highlight lCursor guifg=NONE guibg=Cyan
 "setlocal spell spelllang=ru_yo,en_us " 'yo' letter
 " Sensible defaults
 set relativenumber
+
+" Making Parenthesis And Brackets Handling Easier
+
+inoremap ( ()<Esc>:call BC_AddChar(")")<CR>i
+inoremap { {<CR>}<Esc>:call BC_AddChar("}")<CR><Esc>kA<CR>
+inoremap [ []<Esc>:call BC_AddChar("]")<CR>i
+inoremap " ""<Esc>:call BC_AddChar("\"")<CR>i
+" jump out of parenthesis
+inoremap <C-j> <Esc>:call search(BC_GetChar(), "W")<CR>a
+
+function! BC_AddChar(schar)
+ if exists("b:robstack")
+ let b:robstack = b:robstack . a:schar
+ else
+ let b:robstack = a:schar
+ endif
+endfunction
+
+function! BC_GetChar()
+ let l:char = b:robstack[strlen(b:robstack)-1]
+ let b:robstack = strpart(b:robstack, 0, strlen(b:robstack)-1)
+ return l:char
+endfunction
