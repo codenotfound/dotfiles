@@ -12,9 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'takac/vim-hardtime'
 Plugin 'thanthese/Tortoise-Typing'
-"Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'tpope/vim-fugitive'
-"Plugin 'vimoutliner/vimoutliner'
 Plugin 'vim-scripts/Vim-R-plugin'
 
 " All of your Plugins must be added before the following line
