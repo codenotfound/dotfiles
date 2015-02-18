@@ -14,6 +14,7 @@ Plugin 'takac/vim-hardtime'
 Plugin 'thanthese/Tortoise-Typing'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/Vim-R-plugin'
+Plugin 'LaTeX-Box-Team/LaTeX-Box' 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
