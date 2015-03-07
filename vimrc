@@ -8,17 +8,18 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+"Plugin 'Shougo/neocomplete.vim'
+Plugin 'LaTeX-Box-Team/LaTeX-Box' 
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'takac/vim-hardtime'
 Plugin 'thanthese/Tortoise-Typing'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/nerdcommenter'
-"Plugin 'Shougo/neocomplete.vim'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/Vim-R-plugin'
-Plugin 'LaTeX-Box-Team/LaTeX-Box' 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -139,6 +140,15 @@ set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
 "setlocal spell spelllang=ru_yo,en_us " 'yo' letter
+
+" Splits
+"nnoremap <C-J> <C-W><C-J>
+"nnoremap <C-K> <C-W><C-K>
+"nnoremap <C-L> <C-W><C-L>
+"nnoremap <C-H> <C-W><C-H>
+set splitbelow
+set splitright
+
 " Sensible defaults
 set relativenumber
 
