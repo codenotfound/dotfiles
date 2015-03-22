@@ -9,7 +9,9 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 "Plugin 'Shougo/neocomplete.vim'
+"Plugin 'vim-scripts/restore-view.vim'
 Plugin 'LaTeX-Box-Team/LaTeX-Box' 
+Plugin 'jmcantrell/vim-virtualenv' 
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -149,6 +151,11 @@ highlight lCursor guifg=NONE guibg=Cyan
 set splitbelow
 set splitright
 
+" Folding
+set foldnestmax=2
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
+
 " Sensible defaults
 set relativenumber
-
+let NERDSpaceDelims=1 "for nerdcommenter
