@@ -159,3 +159,4 @@ vnoremap <Space> zf
 " Sensible defaults
 set relativenumber
 let NERDSpaceDelims=1 "for nerdcommenter
+set noswapfile
