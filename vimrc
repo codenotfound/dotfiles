@@ -10,18 +10,21 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 "Plugin 'Shougo/neocomplete.vim'
 "Plugin 'vim-scripts/restore-view.vim'
-Plugin 'LaTeX-Box-Team/LaTeX-Box' 
-Plugin 'jmcantrell/vim-virtualenv' 
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'LaTeX-Box-Team/LaTeX-Box' 
+"Plugin 'jmcantrell/vim-virtualenv' 
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'takac/vim-hardtime'
-Plugin 'thanthese/Tortoise-Typing'
+"Plugin 'takac/vim-hardtime'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/Vim-R-plugin'
+"Plugin 'vim-scripts/Vim-R-plugin'
+Plugin 'mattn/emmet-vim'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'othree/html5.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -144,10 +147,10 @@ highlight lCursor guifg=NONE guibg=Cyan
 "setlocal spell spelllang=ru_yo,en_us " 'yo' letter
 
 " Splits
-"nnoremap <C-J> <C-W><C-J>
-"nnoremap <C-K> <C-W><C-K>
-"nnoremap <C-L> <C-W><C-L>
-"nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
@@ -155,6 +158,9 @@ set splitright
 set foldnestmax=2
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
+
+" Emmet
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " Sensible defaults
 set relativenumber
