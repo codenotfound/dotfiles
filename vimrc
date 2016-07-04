@@ -25,6 +25,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'othree/html5.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -161,6 +162,9 @@ vnoremap <Space> zf
 
 " Emmet
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+" CtrlP settings
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " Sensible defaults
 set relativenumber
