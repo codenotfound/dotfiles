@@ -186,5 +186,6 @@ highlight link SyntasticStyleWarningSign SignColumn
 
 " Sensible defaults
 set relativenumber
+set number
 let NERDSpaceDelims=1 "for nerdcommenter
 set noswapfile
