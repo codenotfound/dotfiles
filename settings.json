@@ -1,0 +1,14 @@
+{
+  "editor.fontSize": 18,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "breadcrumbs.enabled": true,
+  "editor.formatOnSave": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "emmet.triggerExpansionOnTab": true
+}
