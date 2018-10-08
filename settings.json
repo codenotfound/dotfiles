@@ -10,5 +10,11 @@
       "after": ["<Esc>"]
     }
   ],
-  "emmet.triggerExpansionOnTab": true
+  "emmet.triggerExpansionOnTab": true,
+  "editor.lineNumbers": "relative",
+  "vim.easymotion": true,
+  "vim.leader": "<space>",
+  "vim.sneak": true,
+  "editor.wordWrap": "on",
+  "terminal.integrated.fontSize": 16
 }
